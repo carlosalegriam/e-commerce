@@ -1,11 +1,11 @@
 const toListProducts = () => {
-  return fetch("http://localhost:3000/productos")
+  return fetch("https://my-json-server.typicode.com/carlosalegriam/e-commerce/productos")
   .then((respuesta) => respuesta.json())
   .catch((error) => console.log(error));
 };
 
 const createProduct = (imagen, nombre, categoria, precio, descripcion) => {
-  return fetch(`http://localhost:3000/productos`, {
+  return fetch(`https://my-json-server.typicode.com/carlosalegriam/e-commerce/productos`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ const createProduct = (imagen, nombre, categoria, precio, descripcion) => {
 };
 
 const deleteProduct = (id) => {
-  return fetch(`http://localhost:3000/productos/${id}`, {
+  return fetch(`https://my-json-server.typicode.com/carlosalegriam/e-commerce/productos/${id}`, {
     method: 'DELETE',
     headers: {
       "Content-Type": "application/json",
@@ -29,13 +29,13 @@ const deleteProduct = (id) => {
 };
 
 const detailProduct = (id) => {
-  return fetch(`http://localhost:3000/productos/${id}`)
+  return fetch(`https://my-json-server.typicode.com/carlosalegriam/e-commerce/productos/${id}`)
     .then((respuesta) => respuesta.json())
     .catch((error) => console.log(error));
 };
 
 const updateProduct = (imagen, nombre, categoria, precio, descripcion, id) => {
-  return fetch(`http://localhost:3000/productos/${id}`, {
+  return fetch(`https://my-json-server.typicode.com/carlosalegriam/e-commerce/productos/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ const updateProduct = (imagen, nombre, categoria, precio, descripcion, id) => {
 };
 
 const getProductsByCategory = (category) => {
-  return fetch(`http://localhost:3000/productos?categoria=${encodeURIComponent(category)}`)
+  return fetch(`https://my-json-server.typicode.com/carlosalegriam/e-commerce/productos?categoria=${encodeURIComponent(category)}`)
     .then((respuesta) => respuesta.json())
     .catch((error) => console.log(error));
 };
