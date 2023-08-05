@@ -28,7 +28,7 @@ Bienvenido a AluraGeek, una aplicación de e-commerce donde podrás encontrar un
 
 - HTML, CSS y JavaScript para el frontend.
 - Node.js y Express para el backend.
-- MongoDB para la base de datos.
+- db.json Fake REST API con JSON-Server para la base de datos.
 
 ## Contribuciones
 
