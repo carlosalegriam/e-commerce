@@ -19,7 +19,7 @@ Bienvenido a AluraGeek, una aplicación de e-commerce donde podrás encontrar un
 
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/TuUsuario/TuRepositorio.git`
+1. Clona este repositorio: `git clone https://github.com/carlosalegriam/e-commerce/`
 2. Navega a la carpeta del proyecto: `cd AluraGeek-Ecommerce`
 3. Instala las dependencias: `npm install`
 4. Inicia la aplicación: `npm start`
