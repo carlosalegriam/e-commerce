@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/alurageek.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header/nav.css">
+    <link rel="stylesheet" href="./assets/css/main/banner.css">
+    <link rel="stylesheet" href="./assets/css/main/categories.css">
+    <link rel="stylesheet" href="./assets/css/footer/footer.css">
+
+    <script src="https://kit.fontawesome.com/1be562525d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>AluraGeek E-commerce</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <div class="nav__contain">
+                <a class="logo" href="index.html"></a>
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="¿Qué deseas buscar?" id="search">
+                    <div class="search__icon"></div>
+                </div>
+            </div>
+            <div class="nav__login">
+                <a class="boton--login" href="./screens/login.html" >Login</a>
+            </div>
+            <div class="search--movil">
+                <div class="search--movil__icon"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <section class="banner">
+            <h1 class="banner__title">Agosto Promocional</h1>
+            <h2 class="banner__subtitle">Productos seleccionados con 33% de descuento</h2>
+            <a class="banner__boton" href="screens/products.html?categoria=Consolas">Ver Consolas</a>
+        </section> -->
+        <section class="banner">
+            <div class="banner__slider">
+                <button class="banner__next" id="nextSlide">&#10095;</button>
+                <button class="banner__prev" id="prevSlide">&#10094;</button>
+                <div class="banner__slide slide-1">
+                    <h1 class="banner__title">Agosto Promocional</h1>
+                    <h2 class="banner__subtitle">Productos seleccionados con 33% de descuento</h2>
+                    <a class="banner__boton" href="screens/products.html?categoria=Consolas">Ver Consolas</a>
+                </div>
+                <div class="banner__slide slide-2">
+                    <h1 class="banner__title">Los Mejores Productos Geek</h1>
+                    <h2 class="banner__subtitle">Tenemos una amplia variedad de productos</h2>
+                    <a class="banner__boton" href="screens/products.html">Ver Productos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <div class="category__head">
+                <h2 class="head__title" id="search-title">Resultado de busqueda</h2>
+            </div>
+            <div class="category__products" id="products"></div>
+        </section>
+
+        
+        <section class="category">
+            <div class="category__head">
+                <h2 class="head__title">Star Wars</h2>
+                <a class="head__all" href="screens/products.html?categoria=Star%20wars">
+                    <div class="all__title">Ver todo</div>
+                    <div class="all__icon"></div>
+                </a>
+            </div>
+            <div class="category__products" id="starWarsProducts">
+                <!-- Productos de Star Wars aquí -->
+            </div>
+        </section>
+        
+        <section class="category">
+            <div class="category__head">
+                <h2 class="head__title">Consolas</h2>
+                <a class="head__all" href="screens/products.html?categoria=Consolas">
+                    <div class="all__title">Ver todo</div>
+                    <div class="all__icon"></div>
+                </a>
+            </div>
+            <div class="category__products" id="consolasProducts">
+                <!-- Productos de Consolas aquí -->
+            </div>
+        </section>
+        
+        <section class="category">
+            <div class="category__head">
+                <h2 class="head__title">Diversos</h2>
+                <a class="head__all" href="screens/products.html?categoria=Diversos">
+                    <div class="all__title">Ver todo</div>
+                    <div class="all__icon"></div>
+                </a>
+            </div>
+            <div class="category__products" id="diversosProducts">
+                <!-- Productos Diversos se mostrarán aquí -->
+            </div>
+        </section>
+
+         
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="logo"></div>
+            <div class="footer__links">
+                <div class="logo"></div>
+                <a href="#">Quienes somos</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Programa de fidelidad</a>
+                <a href="#">Nuestras Tiendas</a>
+                <a href="#">Quiero ser franquiciado</a>
+                <a href="#">Anúncie aquí</a>
+            </div>
+            <div class="footer__contact">
+                <h3 class="contact__title">Hable con nosotros</h3>
+                <form id="form-contact">
+                    <div class="contact__input-contain">
+                        <input class="contact__input" type="text" name="nombre" placeholder="Nombre" data-tipo="nombre" required maxlength="40">
+                        <label class="contact__label" for="nombre">Nombre</label>
+                        <span class="input-message-error"></span>
+                    </div>
+                    <div class="contact__input-contain">
+                        <textarea class="contact__input textarea" rows="4" cols="40" name="mensaje" placeholder="Mensaje" data-tipo="mensaje" required maxlength="120"></textarea>
+                        <label class="contact__label" for="mesaje">Mensaje</label>
+                        <span class="input-message-error"></span>
+                    </div>
+                    <button class="contact__button">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="author">
+            <p>Desarrollado por Carlos Alegria M.</p>
+            <div class="social">
+                <a href="https://github.com/carlosalegriam" target="_blank" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>2023</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/validacion-form-contact.js"></script>
+    <script type="module" src="./controllers/search_products-controller.js"></script>
+    <script type="module" src="./controllers/product-category.js"></script>
+    <script type="module" src="./controllers/barnnerslider.js"></script>
+</body>
+
+</html>

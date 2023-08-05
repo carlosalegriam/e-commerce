@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;700&display=swap');
+:root {
+  --color-white-dark: white;
+  --color-white-ligth: #f5f5f5;
+  --color-black-dark: black;
+  --color-black-ligth: #464646;
+  --color-black-ligth2:#A2A2A2;
+  --color-blue-dark: #2A7AE4;
+  --color-blue-ligth: #d1e0f4;
+  font-family: "Releway", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-white-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: 'Raleway', sans-serif;
+  color: var(--color-black-ligth);
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--color-blue-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Releway", sans-serif;
+}
+
+/*---------------patrón de diseño---------------*/
+
+textarea:focus,
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-black-ligth2);
+  padding: 2%;
+}
